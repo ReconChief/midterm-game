@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Game Master
   - GroundCheck
+  - Kill Zone
   layers:
   - Default
   - TransparentFX
