@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
 
     public AudioClip jumping; //jumping audio
     public AudioClip coinCollect;
-    public AudioClip gemCollect;
     AudioSource audio; //audio source setup
 
     [SerializeField]
@@ -40,8 +39,6 @@ public class PlayerController : MonoBehaviour
     public Transform bulletPoint;
     public GameObject bullet;
 
-    public GameObject goOverlay;
-
     void Start()
     {
         rigiBody = gameObject.GetComponent<Rigidbody2D>(); //getting RigidBody2D info from gameobject
@@ -50,8 +47,6 @@ public class PlayerController : MonoBehaviour
         audio = GetComponent<AudioSource>(); //access audio source
 
         gm = GameObject.FindGameObjectWithTag("Game Master").GetComponent<GameMaster>();
-
-        goOverlay.SetActive(false);
 
         health = maxHealth;
     }
@@ -98,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
         else
         {
-            speed = 400f;
+            speed = 150f;
         }
 
         if (health > maxHealth)
@@ -112,7 +107,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine("DelayedRestart");
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Instantiate(bullet, bulletPoint.position, bulletPoint.rotation);
         }
@@ -135,20 +130,12 @@ public class PlayerController : MonoBehaviour
             transform.position = respawn.transform.position;
         }
 
-        if (col.CompareTag("Coin"))
+        if (col.CompareTag("Treasure"))
         {
             Destroy(col.gameObject);
             audio.PlayOneShot(coinCollect, .45f);
 
             gm.points++;
-        }
-
-        if (col.CompareTag("Gem"))
-        {
-            Destroy(col.gameObject);
-            audio.PlayOneShot(gemCollect, .45f);
-
-            gm.points += 5;
         }
 
         if (col.CompareTag("Level 2 Trigger"))
@@ -185,8 +172,6 @@ public class PlayerController : MonoBehaviour
     void Death()
     {
         deathCheck = true;
-
-        goOverlay.SetActive(true);
 
         if (deathCheck)
         {

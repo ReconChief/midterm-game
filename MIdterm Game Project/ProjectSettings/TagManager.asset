@@ -7,6 +7,13 @@ TagManager:
   - Game Master
   - GroundCheck
   - Kill Zone
+  - Gust Container
+  - Enemy
+  - Barnacle
+  - Spider
+  - Treasure
+  - Level 2 Trigger
+  - Bat
   layers:
   - Default
   - TransparentFX
@@ -17,7 +24,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
