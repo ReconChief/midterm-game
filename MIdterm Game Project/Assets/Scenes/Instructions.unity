@@ -546,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 104}
-  m_SizeDelta: {x: 329, y: 41}
+  m_AnchoredPosition: {x: 2, y: 7}
+  m_SizeDelta: {x: 523, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1485320385
 MonoBehaviour:
@@ -581,7 +581,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: You and your friends were playing a game of truth or dare and when it was
+    your turn, your friend dared you to go to a haunted house. You, as the brave kid
+    you are, go to the house. Once you entered the front door of the house, the door
+    slams shut, which caused to startle you and leaves you locked in the house. You
+    must find a way out of the house by going through specific doors and avoiding
+    or defeating enemies. Use 'A' key and 'D' key or Left Arrow key and Right Arrow
+    key to move. Use the spacebar to jump. Use the 'F' key to fire a gust of wind
+    from the vacuum weapon you have found in the house. Good Luck!
 --- !u!222 &1485320386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -622,7 +629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -133}
+  m_AnchoredPosition: {x: 0, y: -143}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1672882265
