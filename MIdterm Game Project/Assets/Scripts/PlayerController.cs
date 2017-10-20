@@ -175,6 +175,7 @@ public class PlayerController : MonoBehaviour
 
         if (deathCheck)
         {
+            Destroy(gameObject);
             Time.timeScale = 0;
         }
     }
