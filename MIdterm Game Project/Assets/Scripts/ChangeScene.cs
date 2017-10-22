@@ -11,9 +11,11 @@ public class ChangeScene : MonoBehaviour
 
     public float delay;
 
+    public GameMaster Master;
     private void Start()
     {
         audio = GetComponent<AudioSource>();
+        Master = GetComponent<GameMaster>();
     }
 
     public void ChangetoScene(int sceneToChangeTo)
@@ -25,7 +27,15 @@ public class ChangeScene : MonoBehaviour
         {
             Application.Quit();
         }
+
+       
     }
+
+ public void restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Master.redo();
+        }
 
     IEnumerator Delay()
     {

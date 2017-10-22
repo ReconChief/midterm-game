@@ -5,7 +5,7 @@ using UnityEngine.UI; //give us access to Unity UI methods and variables
 
 public class GameMaster : MonoBehaviour
 {
-    public int points;
+    public static int points;
     public Text pointsText;
     public PlayerController player;
     public GameObject GameOver;
@@ -17,12 +17,24 @@ public class GameMaster : MonoBehaviour
     }
     void Update()
     {
-        pointsText.text = ("Points:" + points);
+        pointsText.text = ("$:" + points);
 
-        if(player.deathCheck)
+        if (player.deathCheck)
         {
             GameOver.SetActive(true);
         }
-        
+
     }
+
+    public static void AddPoints(int AddPoints)
+    {
+        points += AddPoints;
+    }
+
+    public void redo(){
+        points = 0;
+    }
+    
+
+        
 }

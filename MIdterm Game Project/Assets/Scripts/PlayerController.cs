@@ -132,10 +132,10 @@ public class PlayerController : MonoBehaviour
 
         if (col.CompareTag("Treasure"))
         {
-            Destroy(col.gameObject);
+            
             audio.PlayOneShot(coinCollect, .45f);
 
-            gm.points++;
+          
         }
 
         if (col.CompareTag("Level 2 Trigger"))
